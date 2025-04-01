@@ -2,15 +2,19 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 import { PaperProvider } from 'react-native-paper';
 import ViaCep from './component/ViaCep';
+import { ScrollView } from 'react-native';
 
 export default function App() {
   return (
     <PaperProvider>
-      <View style={styles.container}>
+      <ScrollView>
+        <view style={styles.container}> 
+        
         <Text style={styles.txt_titulo}>Consulta de CEP</Text>
         <ViaCep />
         <StatusBar style="light" />
-      </View>
+        </view>
+      </ScrollView>
     </PaperProvider>
   );
 }
